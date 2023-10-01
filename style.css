@@ -1,106 +1,157 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --botao-azul-efeito: #739ed3;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --purple: #d061c8;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
+* {
+    margin: 0;
+    padding: 0;
+}
 
-<body>
-    <section class="container principal">
-        <div class="container__caixa">
-            <h1 class="container__titulo">Com o Combo+, você pode aproveitar a Alura+ e o Alura Língua por um preço
-                único.</h1>
-            <img src="img/Combo.png" alt="Alura + Alura lingua" class="container__imagem">
-            <a href="www.alura.com.br" class="container__botao"> Assine por 12x de R$ 120,00*</a>
-            <a href="www.alura.com.br" class="container__botao botao_secundario"> Assinar somente o Alura+</a>
-            <p class="container_aviso"> *O preço pode variar caso a assinatura seja feita em outros planos.</p>
-        </div>
-    </section>
-    </section>
-    <section class="container secundario">
-        <img src="img/Plataformas.png" alt="Um monitor e um celular" class="secundario__imagem">
-        <div class="container__descricao">
-            <h2 class="descricao__titulo"> Assista do seu jeito </h2>
-            <p class="decricao__texto">Assista do seu jeito
-                Aproveite a tela grande da TV ou assista no tablet, laptop, celular e outros aparelhos. Nossa seleção de
-                cursos não para de crescer.</p>
-        </div>
-    </section>
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
 
-    <section class="container secundario">
-        <div class="container__descricao">
-            <p class="decricao__texto">Assista do seu jeito
-                Aproveite a tela grande da TV ou assista no tablet, laptop, celular e outros aparelhos. Nossa seleção de
-                cursos não para de crescer.
-            </p>
-            <a href="www.alura.com.br" class="container__botao secundario__botao"> Assinar o Combo Alura+</a>
-        </div>
-        <img src="img/Telas.png" alt="Tela do Alura Plus lingua" class="secundario__imagem">
-    </section>
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    align-items: center;
+    /* alinha tudo que está dentro o bloco */
+    text-align: center;
+}
 
-    <section class="container secundario">
-        <img src="img/Notebook.png" alt="Um monitor e um celular" class="secundario__imagem">
-        <div class="container__descricao">
-            <h2 class="descricao__titulo"> Baixe sues cursos </h2>
-            <p class="decricao__texto">Baixe e assista quando e onde quiser. Assim, seus favoritos estão sempre com
-                você, até mesmo sem internet.</p>
-        </div>
-    </section>
+.container {
+    /* Definindo a altura da imagem */
+    height: 100vh;
+    /* Separa cada elemento do texto */
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 
-    <section class="dispositivos">
-        <h2 class="dispositivos__titulo"> Disponível nos seus dispositivos favoritos</h2>
-        <ul class="dispositivos__lista">
-            <li>
-                <img src="img/tv.png" alt="icone tv">
-                <h3 class="lista__item">TV</h3>
-            </li>
-            <li>
-                <img src="img/computador.png" alt="icone computador">
-                <h3 class="lista__item">Computador</h3>
-            </li>
-            <li>
-                <img src="img/celular.png" alt="icone celular">
-                <h3 class="lista__item">Celular</h3>
-            </li>
-        </ul>
-    </section>
-    <footer class="rodape">
-        <img src="img/Logo.png " alt="logo alura+">
-        <ul class="rodape__lista">
-            <li class="lista__link">
-                <a href="#" class="rodape__link">Idiomas</a>
-            </li>
-            <li class="lista__link">
-                <a href="#"class="rodape__link">Dispositivos compatíveis</a>
-            </li>
-            <li class="lista__link">
-                <a href="#"class="rodape__link">Contrato de assinatura</a>
-            </li>
-            <li class="lista__link">
-                <a href="#"class="rodape__link">Politica de privacidade</a>
-            </li>
-            <li class="lista__link">
-                <a href="#"class="rodape__link">Proteção de dados no Brasil</a>
-            </li>
-            <li class="lista__link">
-                <a href="#"class="rodape__link">Ajuda</a>
-            </li>
-        </ul>
-        <p class="rodape__texto">® 2021 Alura, Alura+ e Alura Língua. Todos os direitos reservados. Serviço de
-            assinatura paga. Conteúdo sujeito a disponibilidade.
-        </p>
-        <p class="rodape__texto">
-            Alura+ é um serviço pago, baseado em assinatura e sujeito a termos e condições. O serviço Alura+ é
-            comercializado por Aovs Sistemas de Informática S.A., Rua Vergueiro, 3185 - Liberdade, São Paulo - SP,
-            04101-300, Brasil e CNPJ 05.555.382/0001-33
-        </p>
-    </footer>
-</body>
+/* Estilizando uma ancora para funcionar como botao */
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    /* Para que os elementos se alinhem um abaixo do outro e não em linha */
+    display: block;
+    margin-bottom: 1em;
+}
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    /* tirar sublinhado do link */
+    text-decoration: none;
+}
 
-</html>
+.container_aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 0.1em;
+}
+
+.secundario__botao {
+    /* Tranforma elemento em linha block quebra de linha */
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    /* direção padrao row */
+    display: flex;
+    justify-content: center;
+    /* tira os pontinhos da lista */
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+}
+
+.rodape__logo {
+    margin-bottom: 2em;
+}
+
+.rodape__lista {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.lista__link {
+    padding: 0.6em;
+    font-size: 16px;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: var(--purple);
+}
+
+.rodape__link {
+    text-decoration: none;
+    color: var(--branco-principal);
+}
