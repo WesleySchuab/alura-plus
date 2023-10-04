@@ -157,6 +157,7 @@ body {
 }
 /* Responsividade */
 @media screen and (max-widht: 768px) {
+    background-color: var(--purple);
         .container{
             display: block;
             background-image: none;
